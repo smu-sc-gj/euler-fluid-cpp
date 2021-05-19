@@ -1,1 +1,1 @@
-enum class Color { Default, Hsb, Velocity };
+enum class Color { Default, Hsb, Velocity, Fire };

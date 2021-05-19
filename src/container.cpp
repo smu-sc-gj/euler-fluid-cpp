@@ -102,6 +102,9 @@ void Container::Render(sf::RenderWindow& win, Color color) {
 				case Color::Hsb:
 					rect.setFillColor(this->Hsv((this->density[IX(i,j,this->size)]), 1, 1, 255));
 					break;
+				case Color::Fire:
+					rect.setFillColor(this->Hsv((this->density[IX(i,j,this->size)]), 1, 1, (this->density[IX(i,j,this->size)] > 50) ? 255 : this->density[IX(i,j,this->size)]));
+					break;
 				case Color::Velocity: {
 						int r = (int)this->MapToRange(this->x[IX(i,j,this->size)], -0.05f, 0.05f, 0, 255);
 						int g = (int)this->MapToRange(this->y[IX(i,j,this->size)], -0.05f, 0.05f, 0, 255);
